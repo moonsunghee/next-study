@@ -1,0 +1,83 @@
+@import "./mixin";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap');
+
+.page-header {
+  padding-bottom: 10px;
+  position: fixed;
+  padding-top: 120px;
+  width: 100%;
+  background-color: #efefef;
+  z-index: 2;
+
+  header {
+    @include layout_center;
+
+    display: flex;
+    justify-content: space-between;
+
+    .hdr {
+
+      //&재귀
+      &-left {
+        width: 680px;
+
+        h6 {
+          font-family: var(--ff_sans);
+          font-weight: 900;
+          font-size: 60px;
+          line-height: 60px;
+          color: #ccc;
+        }
+
+        h2 {
+          font-family: var(--ff_sans);
+          font-weight: 700;
+          font-size: 72px;
+          line-height: 80px;
+          color: #000;
+          margin-top: -40px;
+          padding-left: 20px;
+        }
+
+        p {
+          color: #555;
+          font-family: var(--ff_serif);
+          padding-left: 20px;
+        }
+      }
+
+      &-right {
+        width: calc(100% - 680px);
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+      }
+    }
+  }
+}
+
+.page-body {
+  position: relative;
+  top: 310px;
+  height: 2000px;
+  z-index: 1;
+}
+
+button {
+  color: #FFF;
+  background-color: #09f;
+  border: 0;
+  height: 40px;
+  padding: 0 20px;
+  margin-left: 10;
+  border-radius: 5px;
+
+  &.dim {
+    background-color: #999;
+  }
+
+  &.active {
+    background-color: #06f;
+  }
+}
