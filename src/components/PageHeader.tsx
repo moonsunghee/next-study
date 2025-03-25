@@ -1,11 +1,13 @@
-interface myTypes {
+import { Children } from "react";
+
+interface myType{
   number: string;
   title: string;
   description: string;
   children: React.ReactNode;
-}
+};
 
-export default function PageHeader({number, title, description, children}:myTypes){
+export default function PageHeader({number, title, description, children}:myType){
   return(
     <div className="page-header">
       <header>
@@ -19,8 +21,5 @@ export default function PageHeader({number, title, description, children}:myType
         </div>
       </header>
     </div>
-  );
+  )
 }
-
-// const PageHeader1 = function(){}
-// const PageHeader2 = () => {}
