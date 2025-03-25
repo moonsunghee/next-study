@@ -4,7 +4,7 @@ export default function page02() {
   const hd_props = {
     num: "02",
     tit: "내 카드 불러오기",
-    des: "소지하신 카드를 불러와 소비패턴 분석을 하거나 기간별 사용내역을 조회할 수 있습니다.",
+    des: "소지 하신 카드를 불러와 소비패턴을 분석하거나 기간별 사용 내역을 조회할수 있습니다.",
   };
   return (
     <>

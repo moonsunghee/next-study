@@ -20,6 +20,7 @@
     align-items: center;
 
     position: relative;
+    border-radius: 20px;
 
     form {
       display: flex;
@@ -29,6 +30,10 @@
 
       input {
         margin-top: 10px;
+
+        &:first-of-type {
+          margin-top: 0;
+        }
       }
 
       button {
@@ -72,6 +77,20 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
+    }
+
+    .isLoginFail {
+      width: 80%;
+      height: 80%;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.40);
     }
   }
 }
