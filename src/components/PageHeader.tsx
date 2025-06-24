@@ -1,24 +1,25 @@
-import { Children } from "react";
+import Link from "next/link";
+import styles from "@/styles/PageHeader.module.scss";
 
-interface myType{
-  number: string;
-  title: string;
-  description: string;
-  children: React.ReactNode;
-};
+const navigationItems = [
+  { href: "/page01", label: "About" },
+  { href: "/page02", label: "Services" },
+  { href: "/page03", label: "Contact" },
+  { href: "/page04", label: "Customer" },
+];
 
-export default function PageHeader({number, title, description, children}:myType){
+export default function PageHeader(){
   return(
-    <div className="page-header">
+    <div className={styles.pageHeader}>
       <header>
-        <div className="hdr-left">
-          <h6>{number}</h6>
-          <h2>{title}</h2>
-          <p>{description}</p>
-        </div>
-        <div className="hdr-right">
-          {children}
-        </div>
+        <h1><Link href="/">Logo Here</Link></h1>
+        <ul>
+          {navigationItems.map((item, index) => (
+            <li key={index}>
+              <Link href={item.href}>{item.label}</Link>
+            </li>
+          ))}
+        </ul>
       </header>
     </div>
   )
